@@ -825,8 +825,8 @@ body .container div.mobile_nav ul.secondary a:after {
   height: 36px;
   width: 36px;
   z-index: 99998;
-  /* -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out; */
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
 }
 .cursor2.hover,
 .cursor3.hover {
