@@ -1,53 +1,74 @@
 * {
-  font-family: "Work Sans", "NotoSans Korean", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+  font-family: "Bznav Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 0.02em;
   word-break: keep-all;
 }
 
+/* Bznav Sans */
+
 @font-face {
-  font-family: "NotoSans Korean";
-  font-weight: 400;
-  src: url("../fonts/Noto_KR/NotoSansKR-DemiLight.eot");
-  src: url("../fonts/Noto_KR/NotoSansKR-DemiLight.eot?") format("eot"),
-    url("../fonts/Noto_KR/NotoSansKR-DemiLight.woff") format("woff"),
-    url("../fonts/Noto_KR/NotoSansKR-DemiLight.otf") format("opentype");
+  font-family: 'Bznav Sans';
+  src: url('../fonts/BznavSans/BznavSans-Bold.woff2') format('woff2'),
+  url('../fonts/BznavSans/BznavSans-Bold.woff') format('woff'),
+  url('../fonts/BznavSans/BznavSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
-  font-family: "NotoSans Korean";
-  font-weight: 500;
-  src: url("../fonts/Noto_KR/NotoSansKR-Regular.eot");
-  src: url("../fonts/Noto_KR/NotoSansKR-Regular.eot?") format("eot"),
-    url("../fonts/Noto_KR/NotoSansKR-Regular.woff") format("woff"),
-    url("../fonts/Noto_KR/NotoSansKR-Regular.otf") format("opentype");
+  font-family: 'Bznav Sans';
+  src: url('../fonts/BznavSans/BznavSans-ExtraLight.woff2') format('woff2'),
+  url('../fonts/BznavSans/BznavSans-ExtraLight.woff') format('woff'),
+  url('../fonts/BznavSans/BznavSans-ExtraLight.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: fallback;
+}
+
+
+@font-face {
+  font-family: 'Bznav Sans';
+  src: url('../fonts/BznavSans/BznavSans-Light.woff2') format('woff2'),
+  url('../fonts/BznavSans/BznavSans-Light.woff') format('woff'),
+  url('../fonts/BznavSans/BznavSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
-  font-family: "NotoSans Korean";
-  font-weight: 600;
-  src: url("../fonts/Noto_KR/NotoSansKR-Medium.eot");
-  src: url("../fonts/Noto_KR/NotoSansKR-Medium.eot?") format("eot"),
-    url("../fonts/Noto_KR/NotoSansKR-Medium.woff") format("woff"),
-    url("../fonts/Noto_KR/NotoSansKR-Medium.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NotoSans Korean";
-  font-weight: 700;
-  src: url("../fonts/Noto_KR/NotoSansKR-Bold.eot");
-  src: url("../fonts/Noto_KR/NotoSansKR-Bold.eot?") format("eot"),
-    url("../fonts/Noto_KR/NotoSansKR-Bold.woff") format("woff"),
-    url("../fonts/Noto_KR/NotoSansKR-Bold.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NotoSans Korean";
+  font-family: 'Bznav Sans';
+  src: url('../fonts/BznavSans/BznavSans-Black.woff2') format('woff2'),
+  url('../fonts/BznavSans/BznavSans-Black.woff') format('woff'),
+  url('../fonts/BznavSans/BznavSans-Black.ttf') format('truetype');
   font-weight: 900;
-  src: url("../fonts/Noto_KR/NotoSansKR-Black.eot");
-  src: url("../fonts/Noto_KR/NotoSansKR-Black.eot?") format("eot"),
-    url("../fonts/Noto_KR/NotoSansKR-Black.woff") format("woff"),
-    url("../fonts/Noto_KR/NotoSansKR-Black.otf") format("opentype");
+  font-style: normal;
+  font-display: fallback;
 }
+
+@font-face {
+  font-family: 'Bznav Sans';
+  src: url('../fonts/BznavSans/BznavSans-Regular.woff2') format('woff2'),
+  url('../fonts/BznavSans/BznavSans-Regular.woff') format('woff'),
+  url('../fonts/BznavSans/BznavSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Bznav Sans';
+  src: url('../fonts/BznavSans/BznavSans-Medium.woff2') format('woff2'),
+  url('../fonts/BznavSans/BznavSans-Medium.woff') format('woff'),
+  url('../fonts/BznavSans/BznavSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+
 
 /* WorkSans */
 @font-face {
