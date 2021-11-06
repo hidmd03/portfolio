@@ -16,10 +16,12 @@ var stickyBar = function() {
   var bgHeight = bg.clientHeight;
 
   if (window.pageYOffset > bgHeight) {
+    stickyHeader.classList.remove("top");
     stickyHeader.classList.add("sticky");
     progressWrap.classList.add("up");
   } else {
     stickyHeader.classList.remove("sticky");
+    stickyHeader.classList.add("top");
     progressWrap.classList.remove("up");
   }
 };
@@ -38,9 +40,7 @@ window.addEventListener("resize", onresize);
 function progressBar() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 
-  var height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
   var scrolled = (winScroll / height) * 100;
   document.getElementById("pgBar").style.width = scrolled + "%";
@@ -48,8 +48,7 @@ function progressBar() {
 
 const header = () => {
   const burgerHandler = e => {
-    const source =
-      e.target.tagName == "button" ? e.target : e.target.closest("button");
+    const source = e.target.tagName == "button" ? e.target : e.target.closest("button");
     if (document.body.classList.contains("nav")) {
       document.body.classList.add("nonav");
       document.body.classList.remove("nav");
@@ -58,9 +57,7 @@ const header = () => {
       document.body.classList.add("nav");
     }
   };
-  document
-    .querySelector("button.burger")
-    .addEventListener("click", burgerHandler);
+  document.querySelector("button.burger").addEventListener("click", burgerHandler);
 };
 
 const titleImage = () => {

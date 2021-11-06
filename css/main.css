@@ -73,22 +73,36 @@ header {
   width: 100%;
   left: 0;
   top: 0;
+  border-bottom: 1px solid transparent;
+  padding: 16px 0 16px;
+  z-index: 9999;
+}
+
+header.top{
   animation-name: fadeIn;
   animation-duration: 0.5s;
   animation-delay: 0.2s;
   animation-fill-mode: backwards;
-  border-bottom: 1px solid transparent;
-  padding: 16px 0 16px;
 }
 
 header.sticky {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.84);
-  backdrop-filter: blur(8px);
-  transition: all 0.4s cubic-bezier(0, 0.8, 0.2, 1);
-  z-index: 9999;
+  animation-name: landDown;
+  animation-duration: 0.5s;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  transition: all 0.5s cubic-bezier(0, 0.8, 0.2, 1);
+}
+
+@keyframes landDown{
+  from{
+    transform: translate3d(0, -100%, 0);
+  }
+  to{
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 header nav a.logo h1 span {
@@ -924,7 +938,7 @@ body .container div.mobile_nav ul.secondary a:after {
 }
 
 #slider .title .title-head {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 #slider .title .title-head span {
   display: inline-block;
@@ -935,8 +949,6 @@ body .container div.mobile_nav ul.secondary a:after {
 #slider .title .title-head .title-content-headline {
   font-size: 3rem;
   color: #fff;
-
-  text-shadow: 2px -2px 0 rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 767px) {
@@ -946,7 +958,7 @@ body .container div.mobile_nav ul.secondary a:after {
     background-size: cover;
   }
   #slider .title .title-head {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   #slider .title .title-head .title-content-headline {
     font-size: 2rem;
@@ -1043,9 +1055,9 @@ body .container .contents {
 
 .contents > section {
   margin: 0 auto;
-  transition: transform 1.25s cubic-bezier(0, 0.9, 0.1, 1), opacity 0.6s;
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
+  /* transition: transform 1.25s cubic-bezier(0, 0.9, 0.1, 1), opacity 0.6s;
+  transform: translate3d(0, 0, 0); */
+  /* opacity: 1; */
 }
 
 @media (min-width: 768px) {
@@ -1072,11 +1084,11 @@ body .container .contents {
   }
 }
 
-.contents > section.hidden:not(.work) {
+/* .contents > section.hidden:not(.work) {
   opacity: 0;
   transform: translate3d(0, 7rem, 0);
   transition: all 0s;
-}
+} */
 
 .contents > section.content {
   margin-top: 12rem;
