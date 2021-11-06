@@ -73,6 +73,7 @@ img {
 a {
   text-decoration: none;
   cursor: pointer;
+  word-break: break-all !important;
 }
 
 p {

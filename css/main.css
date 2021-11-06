@@ -998,8 +998,8 @@ body .container div.mobile_nav ul.secondary a:after {
 
 .contents > section.summary ul {
   grid-column: 4/12;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-top: 2em;
+  margin-bottom: 4em;
 }
 
 @media (min-width: 768px) {
@@ -1016,18 +1016,17 @@ body .container div.mobile_nav ul.secondary a:after {
 @media (max-width: 767px) {
   .contents > section.summary ul {
     grid-column: 4/12;
-    margin-bottom: 5rem;
   }
 }
 .contents > section.summary li {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5em;
 }
 
 .contents > section.summary .sp-title {
   display: block;
   color: var(--main-color);
   font-size: 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25em;
   font-weight: 600;
 }
 
@@ -1098,7 +1097,7 @@ body .container .contents {
 } */
 
 .contents > section.content {
-  margin-top: 12rem;
+  margin-top: 6em;
 }
 
 .contents > section .sub-title h5 {
@@ -1107,7 +1106,7 @@ body .container .contents {
   flex-wrap: wrap;
   font-weight: 900;
   padding-top: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 0.75em;
   letter-spacing: 0;
   color: var(--main-color);
 }
@@ -1207,14 +1206,13 @@ body .container .contents {
 }
 
 .contents > section .refer{
-  margin-top: 2rem;
+  margin-top: 3em;
 }
 
 .contents > section .refer span{
   display: block;
   font-weight: 700;
   padding-bottom:0.5rem;
-  border-bottom: 3px solid #eaeaea;
   margin-bottom: 1rem;
   color: var(--main-color);
   font-size: 1rem;
