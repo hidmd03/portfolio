@@ -91,8 +91,7 @@ header.sticky {
   left: 0;
   animation-name: landDown;
   animation-duration: 0.5s;
-  background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20px);
+  background-color: var(--bg-color, white);
   transition: all 0.5s cubic-bezier(0, 0.8, 0.2, 1);
 }
 
@@ -127,7 +126,8 @@ header.sticky nav ul li a:after {
 header.offscreen {
   position: fixed;
   transform: translate3d(0, -300%, 0);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   overflow-y: hidden;
   background-color: rgba(255, 255, 255, 0.84);
 }
@@ -135,11 +135,11 @@ header.offscreen {
 @media (min-width: 768px) {
   header.offscreen.active {
     transform: translate3d(0, 0, 0);
-    transition: all 0.4s cubic-bezier(0, 0.8, 0.2, 1);
+    transition: all 1s ease;
   }
   header.offscreen.inactive {
     transform: translate3d(0, -300%, 0);
-    transition: all 0.4s cubic-bezier(0.8, 0, 1, 0.2);
+    transition: all 1s ease;
   }
 }
 
@@ -183,7 +183,13 @@ header nav ul li:first-child {
   margin-left: 0;
 }
 
+header nav a.logo h1{
+  position: relative;
+}
+
 header nav a.logo h1 span {
+  position: relative;
+  top: -2px;
   font-weight: 700;
   font-family: "Work Sans";
   letter-spacing: 0;
