@@ -9,6 +9,11 @@
   color: #1d1d1d;
 }
 
+@media (max-width: 767px){
+  *{
+    word-break: break-all !important;
+  }
+}
 body,
 div,
 p,

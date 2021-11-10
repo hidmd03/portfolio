@@ -544,7 +544,6 @@ body .container div.mobile_nav ul.secondary a:after {
 @media (max-width: 480px) {
   .container > section.hello .text_wrap p {
     font-size: 1rem;
-    word-break: break-all;
   }
 }
 
