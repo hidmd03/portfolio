@@ -1144,7 +1144,7 @@ body .container .contents {
 }
 
 .contents > section .sub-title .des:last-child{
-  margin-bottom: 1.em;
+  margin-bottom: 1em;
 }
 
 .contents > section .content-in > *:nth-child(1) {
@@ -1429,9 +1429,6 @@ body .container .contents {
   }
   .content-in .sub-content p{
     font-size: 1rem;
-  }
-  .contents > section .sub-title .des:last-child{
-    margin-bottom: 1em;
   }
   .content-in .sub-content h6{
     font-size: 1.25rem;
