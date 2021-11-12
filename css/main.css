@@ -1141,9 +1141,10 @@ body .container .contents {
   color: var(--text-color);
   display: inline-block;
   font-size: 1.5rem;
+  margin-bottom: 1.5em;
 }
 
-.contents > section .sub-title .des:last-child{
+.contents > section .sub-title .des:not(:last-child){
   margin-bottom: 1em;
 }
 
