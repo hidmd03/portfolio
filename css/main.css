@@ -1116,6 +1116,10 @@ body .container .contents {
   margin-top: 7em;
 }
 
+.contents > section .sub-title{
+  margin-bottom: 1.5em;
+}
+
 .contents > section .sub-title h5 {
   font-size: 1.75rem;
   display: flex;
@@ -1141,11 +1145,6 @@ body .container .contents {
   color: var(--text-color);
   display: inline-block;
   font-size: 1.5rem;
-  margin-bottom: 1.5em;
-}
-
-.contents > section .sub-title .des:not(:last-child){
-  margin-bottom: 1em;
 }
 
 .contents > section .content-in > *:nth-child(1) {
