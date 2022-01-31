@@ -499,8 +499,10 @@ body .container div.mobile_nav ul.secondary a:after {
 }
 
 .container > section.contact .text_wrap > ul > li > h6 {
-  font-size: 1.65rem;
-  font-weight: 600;
+  font-family: 'Work Sans';
+  font-size: 1.75rem;
+  letter-spacing: -0.2px;
+  font-weight: 700;
   padding-top: 0.5em;
   margin-top: 2em;
   border-top: 3px solid #1c1c1f;
@@ -509,7 +511,7 @@ body .container div.mobile_nav ul.secondary a:after {
 
 .container > section.contact .text_wrap > ul > li > ul > li {
   margin-top: 2em;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .container > section.contact .text_wrap > ul > li > ul > li > ul {
@@ -519,7 +521,7 @@ body .container div.mobile_nav ul.secondary a:after {
 
 .container > section.contact .text_wrap > ul > li > ul > li > ul > li {
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   color: rgba(var(--text-color), 0.7);
 }
 .container > section.hello .text_wrap * {
@@ -1872,6 +1874,11 @@ footer .description ul li:first-child {
   position: absolute;
   content: '-';
   left: -18px;
+}
+
+.ex-list a {
+  display: block;
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
