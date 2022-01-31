@@ -14,6 +14,10 @@ body > .container > section {
   align-self: center;
 }
 
+body > .container > section.work {
+  max-width: 1268px;
+}
+
 @media (min-width: 768px) {
   body > .container > section {
     display: grid;
