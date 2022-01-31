@@ -214,7 +214,7 @@ body.nav header nav a.logo h1 span {
 }
 
 body.pages header:not(.sticky) nav a.logo h1 span {
-  color: #1c1c1f;
+  color: #fff;
 }
 
 header nav ul li a {
