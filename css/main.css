@@ -458,7 +458,7 @@ body .container div.mobile_nav ul.secondary a:after {
 }
 @media (min-width: 1080px) {
   .container > section.hello .text_wrap {
-    grid-column: 2/14;
+    grid-column: 1/15;
     margin: 11.5rem 0 8rem;
   }
 }
@@ -477,7 +477,7 @@ body .container div.mobile_nav ul.secondary a:after {
 }
 @media (min-width: 1080px) {
   .container > section.contact .text_wrap {
-    grid-column: 2/14;
+    grid-column: 1/15;
   }
 }
 @media (max-width: 767px) {
@@ -495,35 +495,67 @@ body .container div.mobile_nav ul.secondary a:after {
 }
 
 .container > section.contact .text_wrap > ul > li {
+  display: flex;
+  flex-direction: column;
   font-size: 1rem;
+  padding-top: 1em;
+  margin-top: 3em;
+  border-top: 2px solid #1c1c1f;
+}
+
+@media (min-width: 568px) {
+  .container > section.contact .text_wrap > ul > li {
+    flex-direction: row;
+  }
 }
 
 .container > section.contact .text_wrap > ul > li > h6 {
   font-family: 'Work Sans';
-  font-size: 1.75rem;
+  font-size: 1rem;
   letter-spacing: -0.2px;
-  font-weight: 700;
-  padding-top: 0.5em;
-  margin-top: 2em;
-  border-top: 3px solid #1c1c1f;
-  margin-bottom: 0.5em;
+  font-weight: 900;
+  margin-bottom: 2em;
+  min-width: 180px;
+}
+
+@media (min-width: 768px) {
+  .container > section.contact .text_wrap > ul > li > h6 {
+    min-width: 240px;
+  }
+}
+.container > section.contact .text_wrap > ul > li > ul {
+  width: 100%;
 }
 
 .container > section.contact .text_wrap > ul > li > ul > li {
-  margin-top: 2em;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+}
+
+.container > section.contact .text_wrap > ul > li > ul > li:not(:last-child) {
+  margin-bottom: 1.25em;
+  padding-bottom: 1.25em;
+  border-bottom: 1px solid #e1e5ea;
+}
+
+.container > section.contact .text_wrap > ul > li > ul > li span {
+  display: block;
+  font-weight: 400;
+  margin-top: 0.2em;
+  font-size: 0.8rem;
+  color: #757c83;
 }
 
 .container > section.contact .text_wrap > ul > li > ul > li > ul {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 1em;
 }
 
 .container > section.contact .text_wrap > ul > li > ul > li > ul > li {
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
   color: rgba(var(--text-color), 0.7);
 }
+
 .container > section.hello .text_wrap * {
   font-family: 'Work Sans', 'Bznav Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -1149,6 +1181,7 @@ body .container .contents {
   font-size: 1.75rem;
   display: flex;
   align-items: center;
+  font-family: 'Work Sans', 'Bznav Sans';
   flex-wrap: wrap;
   font-weight: 700;
   padding-top: 1.5em;
@@ -1654,7 +1687,7 @@ body .container .contents {
   height: 100%;
   left: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(29, 29, 29, 0.94) 0%, rgba(29, 29, 29, 0) 48%);
+  background: linear-gradient(to top, rgba(29, 29, 29, 0.94) 0%, rgba(29, 29, 29, 0) 80%);
   transition: opacity 0.5s cubic-bezier(0, 0.8, 0.2, 1);
   opacity: 0;
   padding: 1.15rem 1rem;
