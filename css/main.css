@@ -590,6 +590,16 @@ body .container div.mobile_nav ul.secondary a:after {
   letter-spacing: 0;
 }
 
+.container > section.hello .text_wrap a {
+  display: inline-block;
+  border-bottom: 1px solid #1d1d1d;
+  transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+}
+
+.container > section.hello .text_wrap a:hover {
+  text-decoration: none;
+  border-color: transparent;
+}
 .container > section.hello .text_wrap p {
   position: relative;
   transition: transform 1.25s cubic-bezier(0, 0.9, 0.1, 1), opacity 0.6s;
@@ -597,7 +607,7 @@ body .container div.mobile_nav ul.secondary a:after {
   transition-delay: 0.1s;
   opacity: 1;
   margin-top: 1.5em;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
 .container > section.hello .text_wrap p:nth-child() {
@@ -1287,7 +1297,7 @@ body .container .contents {
 
 .contents > section .text {
   font-size: 1.1rem;
-  line-height: 1.65;
+  line-height: 1.675;
   margin-top: 8rem;
   color: var(--text-color);
 }
