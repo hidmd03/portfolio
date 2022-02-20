@@ -58,7 +58,7 @@ body.nav:before {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 100;
+  z-index: 2000;
 }
 
 body.nav > .container > header {
@@ -71,7 +71,7 @@ body.nav > .container > header {
 }
 body.nav > .container > header button.burger line:nth-child(1) {
   transform-origin: top left;
-  transform: translate3d(2px, -1px, 0) rotate(45deg);
+  transform: translate3d(2.5px, -1px, 0) rotate(45deg);
 }
 body.nav > .container > header button.burger line:nth-child(2) {
   transform-origin: top right;
@@ -105,12 +105,16 @@ header.top {
 
 header.sticky {
   position: fixed;
-  top: 0;
+  top: -62px;
   left: 0;
   animation-name: landDown;
   animation-duration: 0.5s;
   background-color: var(--bg-color, white);
-  transition: all 0.5s cubic-bezier(0, 0.8, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+header.sticky.focusout {
+  top: 0;
 }
 
 @keyframes landDown {
@@ -130,8 +134,12 @@ header.sticky nav a.logo h1 span {
   color: var(--main-color);
 }
 
-body.nav header.sticky nav a.logo h1 span {
+body.pages header.top nav a.logo h1 span {
   color: #fff;
+}
+
+body.nav header.sticky nav a.logo h1 span {
+  color: var(--main-color);
 }
 
 header.sticky nav ul li a {
@@ -151,6 +159,9 @@ header.offscreen {
 }
 
 @media (min-width: 768px) {
+  header.sticky {
+    top: -66px;
+  }
   header.offscreen.active {
     transform: translate3d(0, 0, 0);
     transition: all 1s ease;
@@ -217,8 +228,12 @@ body.nav header nav a.logo h1 span {
   color: #1c1c1f;
 }
 
-body.pages header:not(.sticky) nav a.logo h1 span {
+body.pages.nonav header:not(.sticky) nav a.logo h1 span {
   color: #fff;
+}
+
+body.pages.nav header:not(.sticky) nav a.logo h1 span {
+  color: var(--main-color);
 }
 
 header nav ul li a {
@@ -298,12 +313,20 @@ header nav button.burger line {
   transition: all 0.2s;
 }
 
-body.nav header nav button.burger line {
+body.nav header button.burger line {
   stroke: #1c1c1f;
 }
 
-body.pages header:not(.sticky) nav button.burger line {
-  stroke: #1c1c1f;
+body.pages.nav header:not(.sticky) button.burger line {
+  stroke: var(--main-color);
+}
+
+body.pages header.top button.burger line {
+  stroke: #fff;
+}
+
+body.pages header.sticky button.burger line {
+  stroke: var(--main-color);
 }
 
 @media (min-width: 768px) {
@@ -406,6 +429,11 @@ body .container div.mobile_nav ul.primary a {
   font-family: 'Work Sans';
   color: #1c1c1f;
 }
+
+body.pages .container div.mobile_nav ul.primary a {
+  color: var(--main-color);
+}
+
 body .container div.mobile_nav ul.primary a.active {
   text-decoration: underline;
 }
@@ -776,21 +804,36 @@ body .container div.mobile_nav ul.secondary a:after {
   transform: translateY(-60px);
 }
 
+@media (max-width: 1080px) {
+  .title-content-text .title-head .title-content-headline {
+    font-size: 1.05rem;
+  }
+}
+
 @media (max-width: 767px) {
   .title-content-text {
     padding: 12px 0;
   }
+  .title-content-text .title-head .title-content-headline {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
   .title-content-text .title-head .title-content-headline {
     font-size: 1.1rem;
   }
 }
 
 .contents > section a {
-  color: #2a6cf2;
+  text-decoration: none;
+  border-bottom: solid 1px;
+  transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
 }
 
 .contents > section a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  border-color: transparent;
 }
 
 .title-subhead {
@@ -1174,19 +1217,31 @@ body .container .contents {
 }
 
 .contents > section .sub-title {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
+}
+.contents > section .sub-title q {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  font-style: italic;
+  color: #5c6267;
+  padding: 2em;
+  border-top: 1px solid #ebecf0;
+  border-bottom: 1px solid #ebecf0;
+  margin-bottom: 1em;
 }
 
 .contents > section .sub-title h5 {
   font-size: 1.75rem;
   display: flex;
-  align-items: center;
-  font-family: 'Work Sans', 'Bznav Sans';
+  flex-direction: column;
   flex-wrap: wrap;
   font-weight: 700;
   padding-top: 1.5em;
-  padding-bottom: 0.85em;
+  padding-bottom: 1.5em;
   letter-spacing: 0;
+  word-break: keep-all;
   color: var(--text-color);
 }
 
@@ -1201,8 +1256,9 @@ body .container .contents {
 .contents > section .sub-title .des {
   font-weight: 700;
   color: var(--text-color);
-  display: inline-block;
+  display: block;
   font-size: 1.5rem;
+  margin-bottom: 1em;
 }
 
 .contents > section .content-in > *:nth-child(1) {
@@ -1214,12 +1270,18 @@ body .container .contents {
   .contents > section .content-in {
     grid-column: 2/14;
   }
+  .contents > section .sub-title q {
+    font-size: 1.625rem;
+  }
 }
 
 @media (min-width: 1080px) {
   .contents > section .sub-title,
   .contents > section .content-in {
     grid-column: 3/13;
+  }
+  .contents > section .sub-title q {
+    font-size: 1.75rem;
   }
 }
 
@@ -1303,7 +1365,7 @@ body .container .contents {
 }
 
 .contents > section .refer a {
-  display: block;
+  display: inline-block;
   margin-bottom: 0.5rem;
   line-height: 1.2;
   font-size: 1rem;
@@ -1409,6 +1471,9 @@ body .container .contents {
     margin-top: 2rem;
   }
 }
+.img-wrap .img-in {
+  background-color: var(--content-bg-color);
+}
 
 .contents > section.full .img-wrap .img-in {
   width: 100%;
@@ -1461,6 +1526,7 @@ body .container .contents {
 
 .content-in .sub-content p {
   font-size: 1.1rem;
+  line-height: 1.65;
 }
 
 .content-in .sub-content p + p {
@@ -1677,6 +1743,7 @@ body .container .contents {
   background-position: 50% 50%;
   transition: transform 250ms ease;
   transform: translateY(0%);
+  line-height: 0;
 }
 
 .card-in .title-content-text {
@@ -1771,8 +1838,8 @@ body .material-icons {
 .progress-container {
   position: absolute;
   width: 100%;
-  height: 1px;
-  background: #ccc;
+  height: 2px;
+  background: #e1e5ea;
   bottom: -1px;
   opacity: 0;
 }
@@ -1787,7 +1854,7 @@ body.nav .progress-container.up {
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 1px;
+  height: 2px;
   background-color: var(--main-color);
   width: 0%;
 }

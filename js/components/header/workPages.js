@@ -9,11 +9,13 @@ var stickyHeader = document.getElementById('header');
 var bg = document.getElementById('slider');
 var progressWrap = document.getElementById('pgWrap');
 
+let lastScrollPosition = 0;
+
 // Get the offset position of the navbar
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 var stickyBar = function () {
-  var bgHeight = bg.clientHeight;
+  let bgHeight = bg.clientHeight;
 
   if (window.pageYOffset > bgHeight) {
     stickyHeader.classList.remove('top');
@@ -26,16 +28,37 @@ var stickyBar = function () {
   }
 };
 
-var onresize = function () {
-  var width = document.body.clientWidth;
-  if (width <= 767) {
-    stickyBar();
+const scrollHandler = (e) => {
+  const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  let scrollDirectionDown = true;
+
+  if (scrollTop != lastScrollPosition) {
+    console.log('scrollTop', scrollTop);
+    console.log('lastScrollPosition', lastScrollPosition);
+    scrollDirectionDown = scrollTop > lastScrollPosition;
+  }
+
+  let headerTriggerPoint = scrollDirectionDown ? header.scrollHeight : 0;
+
+  if (scrollTop > headerTriggerPoint) {
+    stickyHeader.classList.add('focusout');
   } else {
-    stickyBar();
+    stickyHeader.classList.remove('focusout');
+  }
+  setTimeout(() => {
+    lastScrollPosition = scrollTop;
+  }, 750);
+};
+
+window.addEventListener('scroll', scrollHandler);
+
+var onResize = function () {
+  if (window.innerWidth > 768) {
+    document.body.classList.remove('nav');
   }
 };
 
-window.addEventListener('resize', onresize);
+window.addEventListener('resize', onResize);
 
 function progressBar() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;

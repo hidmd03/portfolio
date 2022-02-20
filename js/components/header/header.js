@@ -40,6 +40,15 @@ const header = () => {
 
     lastScrollPosition = scrollTop;
   };
+
+  var onResize = function () {
+    if (window.innerWidth > 768) {
+      document.body.classList.remove('nav');
+    }
+  };
+
+  window.addEventListener('resize', onResize);
+
   window.addEventListener('scroll', scrollHandler);
   document.querySelector('button.burger').addEventListener('click', burgerHandler);
   scrollHandler();
