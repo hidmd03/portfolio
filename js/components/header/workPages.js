@@ -33,8 +33,6 @@ const scrollHandler = (e) => {
   let scrollDirectionDown = true;
 
   if (scrollTop != lastScrollPosition) {
-    console.log('scrollTop', scrollTop);
-    console.log('lastScrollPosition', lastScrollPosition);
     scrollDirectionDown = scrollTop > lastScrollPosition;
   }
 
