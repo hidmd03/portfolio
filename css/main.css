@@ -109,7 +109,7 @@ header.sticky {
   left: 0;
   animation-name: landDown;
   animation-duration: 0.5s;
-  background-color: var(--bg-color, white);
+  background-color: var(--main-color, black);
   transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -131,7 +131,7 @@ header nav a.logo h1 span {
 }
 
 header.sticky nav a.logo h1 span {
-  color: var(--main-color);
+  color: white;
 }
 
 body.pages header.top nav a.logo h1 span {
@@ -139,11 +139,11 @@ body.pages header.top nav a.logo h1 span {
 }
 
 body.nav header.sticky nav a.logo h1 span {
-  color: var(--main-color);
+  color: white;
 }
 
 header.sticky nav ul li a {
-  color: var(--main-color);
+  color: white;
 }
 
 header.sticky nav ul li a:after {
@@ -233,7 +233,7 @@ body.pages.nonav header:not(.sticky) nav a.logo h1 span {
 }
 
 body.pages.nav header:not(.sticky) nav a.logo h1 span {
-  color: var(--main-color);
+  color: white;
 }
 
 header nav ul li a {
@@ -318,7 +318,7 @@ body.nav header button.burger line {
 }
 
 body.pages.nav header:not(.sticky) button.burger line {
-  stroke: var(--main-color);
+  stroke: white;
 }
 
 body.pages header.top button.burger line {
@@ -326,7 +326,7 @@ body.pages header.top button.burger line {
 }
 
 body.pages header.sticky button.burger line {
-  stroke: var(--main-color);
+  stroke: white;
 }
 
 @media (min-width: 768px) {
@@ -399,6 +399,11 @@ body .container div.mobile_nav:after {
   opacity: 0;
   pointer-events: none;
 }
+
+body.pages .container div.mobile_nav:after {
+  background-color: var(--main-color);
+}
+
 body .container div.mobile_nav > div {
   opacity: 0;
   transition: opacity 0.3s 0s ease-out, transform 0.5s 0.2s cubic-bezier(0, 0.8, 0.2, 1);
@@ -431,7 +436,7 @@ body .container div.mobile_nav ul.primary a {
 }
 
 body.pages .container div.mobile_nav ul.primary a {
-  color: var(--main-color);
+  color: white;
 }
 
 body .container div.mobile_nav ul.primary a.active {
@@ -672,7 +677,7 @@ body .container div.mobile_nav ul.secondary a:after {
 .container > section.work:after {
   content: '';
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -1716,6 +1721,8 @@ body .container .contents {
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card-in {
@@ -1725,7 +1732,6 @@ body .container .contents {
   height: 100%;
   background-color: #fff;
   overflow: hidden;
-  border-radius: 6px;
 }
 
 .card-in .title-media {
