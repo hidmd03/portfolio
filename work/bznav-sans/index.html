@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="theme-color" content="#001f3d" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>비즈넵의 프로덕트 폰트, Bznav Sans. - Youngsam</title>
@@ -9,12 +10,13 @@
     <link rel="stylesheet" href="../../css/font.css" />
     <link rel="stylesheet" href="../../css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+    <link id="favicon" rel="icon" type="image/svg+xml" href="../../favicon.svg" />
     <style>
       :root {
-        --main-color: #f02828;
+        --main-color: #001f3d;
         --bg-color: #fff;
-        --text-color: rgb(29, 29, 31);
+        --text-color: #002447;
+        --content-bg-color: #fff3de;
       }
       .contents > section.full-max .img-wrap .img-in {
         object-fit: cover;
@@ -77,7 +79,7 @@
         <div class="title-sec">
           <div class="title">
             <div class="title-head">
-              <span class="category-eyebrow">Product Design</span>
+              <span class="category-eyebrow">Internal Product Design</span>
               <h5 class="title-content-headline">비즈넵의 프로덕트 폰트, Bznav Sans.</h5>
             </div>
             <time class="title-date">2020년 10월 16일</time>
@@ -96,45 +98,65 @@
         </section>
         <section class="intro">
           <div class="sub-title">
-            <h5>Overview.</h5>
+            <h5>배경.</h5>
           </div>
           <div class="content-in">
             <p class="text">
-              입사를 하고보니 디자인 툴로는 XD를 사용하고 있었고, 디자인 시스템이 없던 시점이라 적응하는 것에도 적잖이
-              시간을 소모하고 있었습니다. 여기저기 흩어진 파일들로 인해 머릿속에서 정리가 되지 않아 화면 하나를 제작하는
-              데에도 많은 시간이 소모되었습니다. 또한 애자일 조직문화 속에서 빠르게 화면을 제작하기 위해서는 디자인
-              시스템이 절실히 필요했습니다. 그래서 Figma를 도입하여 빠르게 Atomic한 디자인 시스템을 제작하려고
-              하였습니다.
+              지엔터프라이즈의 프로덕트 디자이너로 2020년 6월 1일에 입사를 했었고, 디자인 툴로는 XD를 사용하고
+              있었습니다. 디자인 시스템이 없었고, 작업 환경을 살펴보니 기존의 디자이너 분들도 파일을 하나씩 살펴보면서
+              디자인을 하여 적잖이 시간을 소모하고 있었습니다. 7월부터는 PM 체제를 도입하여 프로덕트 팀이라는 조직으로
+              개편되면서 애자일 조직문화 속에서 빠르게 화면을 제작하기 위해서는 디자인 시스템이 절실히 필요했습니다.
+              그래서 Figma를 도입하여 빠르게 디자인 시스템을 제작하려고 하였습니다. 디자인 시스템을 제작하기 위해서
+              타이포그래피의 바탕인 폰트를 설정하여야 했습니다. 여기부터 고민이 시작되었습니다.
             </p>
-            <div class="img-wrap">
-              <img class="img-in" src="./img/diabates-app-0.png" />
+            <div class="sub-content">
+              <div class="img-wrap">
+                <img class="img-in" src="./img/bznav-sans-1.png" />
+                <p class="caption">
+                  기능 위주로 파일 구분이 되어있어서, 화면 내에 어떤 컴포넌트가 있는지를 확인하려면 파일을 하나씩 열거나
+                  제플린으로 확인을 해야했습니다.
+                </p>
+              </div>
             </div>
           </div>
         </section>
         <section class="content">
           <div class="sub-title">
-            <h5>Problem.</h5>
+            <h5>문제점.</h5>
           </div>
           <div class="content-in">
             <p class="text">
-              디자인시스템을 제작하려고 하니 기반이 될 수 있는 폰트에 대한 정의가 필요하였는데, 기존에 사용하고 있는
-              폰트에 문제가 생겼습니다. 운영 중인 비즈넵 서비스 웹앱과 모바일앱 둘다 '스포카한산스'를 이용하고
-              있었습니다. 이전 회사에서 홈페이지 개발을 해보면서 스포카한산스의 문제점을 2가지 발견했습니다.
+              기존에 사용하고 있는 폰트에는 문제가 있었는데, 운영 중인 비즈넵 서비스 웹앱과 모바일앱 둘다 '스포카 한
+              산스'를 이용하고 있었습니다. 이전 회사에서 홈페이지 개발을 하면서 웹폰트로 사용해보면서 발견한 문제점이
+              있었는데, 크게 2가지로 설명할 수 있습니다.
             </p>
             <p class="text">
               첫 번째는 해상도가 낮은 웹에서는 일부 글리프가 뭉개지는 현상이 나타납니다. 모바일은 해상도가 높아 앱에서
-              사용하는 폰트가 뭉개지는 현상을 식별하기 힘듭니다. 하지만 PC이거나 모바일에서 웹브라우저를 사용하는 경우,
-              웹브라우저가 지원하는 ppi(최대 72ppi)가 낮아 일부 글리프가 뭉개집니다.
+              사용하는 폰트가 뭉개지는 현상을 식별하기 힘듭니다. 하지만 레티나가 아니어서 해상도가 낮은 PC에서 보거나
+              모바일에서 웹브라우저를 사용하는 경우, 웹브라우저가 지원하는 ppi(최대 72ppi)가 낮아 일부 글리프가
+              뭉개집니다.
             </p>
+            <div class="sub-content">
+              <div class="img-wrap">
+                <img class="img-in" src="./img/bznav-sans-2.png" />
+                <p class="caption">
+                  폰트가 Bold일 경우에, 또 글씨의 크기가 작아질 경우에 더 심하게 뭉개지는 현상을 볼 수 있습니다.
+                </p>
+              </div>
+            </div>
             <p class="text">
               두 번째는 스포카한산스는 지원하는 패밀리에 Medium이 없었습니다. 실제로 앱에 사용하는 자족은 Regular,
-              Medium, Bold가 대부분이어서 Medium이 빠지는 것은 타이포그래피에 큰 제약을 가져옵니다.
+              Medium, Bold가 대부분이어서 Medium 하나가 빠지는 것은 타이포그래피에 큰 제약을 가져옵니다.
             </p>
-          </div>
-        </section>
-        <section class="full margin-top-no">
-          <div class="img-wrap">
-            <img class="img-in" src="./img/diabates-app-1.png" />
+            <div class="sub-content">
+              <div class="img-wrap">
+                <img class="img-in" src="./img/bznav-sans-3.png" />
+                <p class="caption">
+                  Thin과 Light를 제공하지만 앱에서 사용하기에 부적절하여 프로덕트에 들어갈 폰트는 Regular 이상을
+                  사용합니다.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         <section class="content">
@@ -328,11 +350,11 @@
           </div>
         </div>
         <footer>
-          <div class="copyright">Copyright © 2022 Youngsam.</div>
+          <div class="copyright">Copyright © 2022 <span class="mylogo">Youngsam</span></div>
           <div class="description">
             <ul>
               <li>
-                <span>Designed and developed by Youngsam.</span>
+                <p>Designed and developed by <span class="mylogo">Youngsam</span></p>
               </li>
             </ul>
           </div>

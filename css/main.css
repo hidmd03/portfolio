@@ -126,10 +126,6 @@ header.sticky.focusout {
   }
 }
 
-header nav a.logo h1 span {
-  font-size: 22px;
-}
-
 header.sticky nav a.logo h1 span {
   color: white;
 }
@@ -220,8 +216,9 @@ header nav a.logo h1 span {
   position: relative;
   top: -2px;
   font-weight: 700;
-  font-family: 'Work Sans';
-  letter-spacing: 0;
+  font-family: 'FreightText';
+  letter-spacing: -0.05rem;
+  font-size: 26px;
 }
 
 body.nav header nav a.logo h1 span {
@@ -244,7 +241,8 @@ header nav ul li a {
   text-transform: uppercase;
   line-height: 1.5;
   height: 1.5rem;
-  font-family: 'Work Sans';
+  font-weight: 500;
+  letter-spacing: 0.07rem;
 }
 
 body.pages header:not(.sticky) nav ul li a {
@@ -430,9 +428,10 @@ body .container div.mobile_nav ul.primary li:last-child {
 
 body .container div.mobile_nav ul.primary a {
   font-size: 1.25rem;
-  font-weight: 700;
-  font-family: 'Work Sans';
+  font-weight: 500;
+  text-transform: uppercase;
   color: #1c1c1f;
+  letter-spacing: 0.05rem;
 }
 
 body.pages .container div.mobile_nav ul.primary a {
@@ -543,10 +542,9 @@ body .container div.mobile_nav ul.secondary a:after {
 }
 
 .container > section.contact .text_wrap > ul > li > h6 {
-  font-family: 'Work Sans';
   font-size: 1rem;
   letter-spacing: -0.2px;
-  font-weight: 900;
+  font-weight: 700;
   margin-bottom: 2em;
   min-width: 180px;
 }
@@ -589,10 +587,11 @@ body .container div.mobile_nav ul.secondary a:after {
   color: rgba(var(--text-color), 0.7);
 }
 
-.container > section.hello .text_wrap * {
-  font-family: 'Work Sans', 'Bznav Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+.container > section.hello .text_wrap h2 {
+  font-family: 'FreightText', 'Bznav Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.02em;
+  margin-bottom: 1em;
 }
 
 .container > section.hello .text_wrap a {
@@ -606,14 +605,28 @@ body .container div.mobile_nav ul.secondary a:after {
   text-decoration: none;
   border-color: transparent;
 }
+
 .container > section.hello .text_wrap p {
   position: relative;
   transition: transform 1.25s cubic-bezier(0, 0.9, 0.1, 1), opacity 0.6s;
   transform: translate3d(0, 0, 0);
   transition-delay: 0.1s;
-  opacity: 1;
+}
+
+body.welcome .container > section.hello .text_wrap p {
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+body.about .container > section.hello .text_wrap p {
   margin-top: 1.5em;
-  line-height: 1.65;
+  line-height: 1.675;
+  letter-spacing: 0.01rem;
+}
+
+body.about .container > section.hello .text_wrap p:first-child {
+  margin-top: 0;
 }
 
 .container > section.hello .text_wrap p:nth-child() {
@@ -623,20 +636,19 @@ body .container div.mobile_nav ul.secondary a:after {
 
 @media (min-width: 768px) {
   .container > section.hello .text_wrap p {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 1080px) {
   .container > section.hello .text_wrap p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 767px) {
   .container > section.hello .text_wrap p {
     font-size: 1.15rem;
-    margin-top: 1.5rem;
   }
 }
 
@@ -666,7 +678,9 @@ body .container div.mobile_nav ul.secondary a:after {
 
 .container > section.work .copy .left {
   font-weight: 900;
+  font-family: 'FreightText';
   color: #fff;
+  letter-spacing: -0.05rem;
 }
 
 .container > section.work.hidden {
@@ -843,8 +857,9 @@ body .container div.mobile_nav ul.secondary a:after {
 
 .contents > section a {
   text-decoration: none;
-  border-bottom: solid 1px;
+  border-bottom: solid 1px var(--text-color);
   transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+  color: var(--text-color);
 }
 
 .contents > section a:hover {
@@ -1165,9 +1180,8 @@ body .container div.mobile_nav ul.secondary a:after {
 
 .contents > section.summary .sp-text {
   display: block;
-  color: rgba(var(--text-color) 0.8);
+  color: var(--text-color);
   font-size: 1rem;
-  font-weight: 400;
 }
 
 /* contents */
@@ -1241,11 +1255,15 @@ body .container .contents {
   text-align: center;
   display: block;
   font-style: italic;
-  color: #5c6267;
+  color: var(--main-color);
   padding: 2em;
-  border-top: 1px solid #ebecf0;
-  border-bottom: 1px solid #ebecf0;
   margin-bottom: 1em;
+}
+
+.contents > section .sub-title q::before {
+  content: 'Q.';
+  display: block;
+  clear: both;
 }
 
 .contents > section .sub-title h5 {
@@ -1254,8 +1272,8 @@ body .container .contents {
   flex-direction: column;
   flex-wrap: wrap;
   font-weight: 700;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   letter-spacing: 0;
   word-break: keep-all;
   color: var(--text-color);
@@ -1303,7 +1321,7 @@ body .container .contents {
 
 .contents > section .text {
   font-size: 1.1rem;
-  line-height: 1.675;
+  line-height: 1.75;
   margin-top: 8rem;
   color: var(--text-color);
 }
@@ -1434,12 +1452,13 @@ body .container .contents {
 }
 
 .contents > section .img-wrap .caption {
-  display: inline-block;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  font-size: 1rem;
-  color: rgba(var(--text-color), 0.7);
+  display: block;
+  margin: 1.5em auto;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  max-width: 480px;
+  text-align: center;
 }
 
 .contents > section .img-wrap .caption strong {
@@ -1537,12 +1556,14 @@ body .container .contents {
 .content-in .sub-content h6 {
   font-weight: bold;
   font-size: 1.25rem;
-  margin-bottom: 1em;
+  margin-bottom: 0.85em;
+  color: var(--text-color);
 }
 
 .content-in .sub-content p {
   font-size: 1.1rem;
   line-height: 1.65;
+  color: var(--text-color);
 }
 
 .content-in .sub-content p + p {
@@ -1573,7 +1594,6 @@ body .container .contents {
   }
   .content-in .sub-content h6 {
     font-size: 1.25rem;
-    margin-bottom: 0.85em;
   }
 }
 
@@ -1934,6 +1954,10 @@ footer .copyright {
   color: #1c1c1f;
 }
 
+footer .mylogo {
+  font-family: 'FreightText';
+}
+
 @media (max-width: 767px) {
   footer .description ul {
     justify-content: flex-start;
@@ -1944,7 +1968,7 @@ footer .description ul li {
   margin-left: 20px;
 }
 
-footer .description ul li span {
+footer .description ul li p {
   font-size: 0.8rem;
   font-weight: 400;
   color: #1c1c1f;

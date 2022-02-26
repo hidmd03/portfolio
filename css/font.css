@@ -2,7 +2,19 @@
   font-family: 'Bznav Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
   word-break: keep-all;
+  letter-spacing: 0.01rem;
 }
+
+/* FreightText */
+
+@font-face {
+  font-family: 'FreightText';
+  src: url('../fonts/FreightText/3866ef6c-9678-4744-b9cc-320b34a5a66e.woff2') format('woff2'),
+    url('../fonts/FreightText/ccafaace-64a4-4386-ac8d-b91b19487176.woff') format('woff');
+  font-display: fallback;
+}
+
+/* This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: https://www.linotype.com */
 
 /* Bznav Sans */
 
@@ -64,35 +76,4 @@
   font-weight: 500;
   font-style: normal;
   font-display: fallback;
-}
-
-/* WorkSans */
-@font-face {
-  font-family: 'Work Sans';
-  font-weight: 400;
-  src: url('../fonts/WorkSans/WorkSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-weight: 500;
-  src: url('../fonts/WorkSans/WorkSans-Medium.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-weight: 600;
-  src: url('../fonts/WorkSans/WorkSans-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-weight: 700;
-  src: url('../fonts/WorkSans/WorkSans-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Work Sans';
-  font-weight: 900;
-  src: url('../fonts/WorkSans/WorkSans-ExtraBold.ttf') format('truetype');
 }
