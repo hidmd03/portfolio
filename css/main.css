@@ -90,7 +90,7 @@ header {
   z-index: 9999;
   width: 100%;
   left: 0;
-  top: 0;
+  top: -1px;
   border-bottom: 1px solid transparent;
   padding: 16px 0 16px;
   z-index: 9999;
@@ -114,7 +114,7 @@ header.sticky {
 }
 
 header.sticky.focusout {
-  top: 0;
+  top: -1px;
 }
 
 @keyframes landDown {
