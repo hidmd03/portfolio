@@ -1561,7 +1561,7 @@ body .container .contents {
 
 @media (max-width: 767px) {
   .contents > section .text {
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-top: 6rem;
   }
   .contents > section .img-wrap {
@@ -1578,13 +1578,13 @@ body .container .contents {
 
 @media (max-width: 480px) {
   .contents > section .text {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 360px) {
   .contents > section .text {
-    font-size: 0.925rem;
+    font-size: 0.975rem;
   }
 }
 
