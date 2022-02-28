@@ -713,10 +713,16 @@ body.about .container > section.hello .text_wrap p:first-child {
 
 @media (max-width: 767px) {
   .container > section.work .block {
-    margin: 3rem 20px 0;
+    margin: 3em 20px 0;
   }
   .container > section.work .copy p {
     margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container > section.work .block {
+    margin: 2em 20px 0;
   }
 }
 
@@ -951,13 +957,19 @@ body.about .container > section.hello .text_wrap p:first-child {
 }
 
 .container > section .copy {
-  margin-top: 5rem;
+  margin-top: 5em;
 }
 
 @media (max-width: 767px) {
   .container > section .copy {
     margin: 0 20px;
-    margin-top: 3rem;
+    margin-top: 3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .container > section .copy {
+    margin-top: 2.5em;
   }
 }
 
@@ -1102,12 +1114,12 @@ body.about .container > section.hello .text_wrap p:first-child {
 #slider .title .title-head span {
   display: inline-block;
   color: #fff;
-  margin-bottom: 0;
+  margin-bottom: 0.325em;
 }
 
 #slider .title .title-head .title-content-headline {
   font-size: 3rem;
-  line-height: 1.4;
+  line-height: 1.1;
   font-weight: 900;
   color: #fff;
   letter-spacing: 0;
@@ -1192,7 +1204,7 @@ body.about .container > section.hello .text_wrap p:first-child {
 .contents > section.summary .sp-text {
   display: block;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.925rem;
 }
 
 /* contents */
@@ -1626,11 +1638,17 @@ body .container .contents {
   .content-in .sub-content p {
     font-size: 1rem;
   }
+  .content-in .sub-content {
+    margin-top: 3em;
+  }
 }
 
 @media (max-width: 480px) {
   .contents > section .sub-title .des {
     font-size: 1.325rem;
+  }
+  .content-in .sub-content {
+    margin-top: 2.5em;
   }
   .content-in .sub-content p {
     font-size: 1rem;
