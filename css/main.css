@@ -1409,6 +1409,9 @@ body .container .contents {
 }
 
 .contents > section .text .text-li h6 {
+  position: relative;
+  margin-left: 1.4em;
+  width: calc(100% - 1.4em);
   margin-top: 1em;
   margin-bottom: 0.25em;
   font-size: 1.25rem;
@@ -1416,6 +1419,60 @@ body .container .contents {
   font-weight: 700;
   color: var(--text-color);
   word-break: keep-all;
+}
+
+.contents > section .text .text-li h6:before {
+  position: absolute;
+  left: -1.4em;
+  display: inline-block;
+}
+
+/* @media (max-width: 480px) {
+  .contents > section .text .text-li h6 {
+    margin-left: 0;
+    width: 100%;
+  }
+  .contents > section .text .text-li h6:before {
+    position: relative;
+    left: 0;
+    display: block;
+  }
+} */
+
+.contents > section .text .text-li:nth-child(1) h6:before {
+  content: '①';
+}
+
+.contents > section .text .text-li:nth-child(2) h6:before {
+  content: '②';
+}
+
+.contents > section .text .text-li:nth-child(3) h6:before {
+  content: '③';
+}
+
+.contents > section .text .text-li:nth-child(4) h6:before {
+  content: '④';
+}
+
+.contents > section .text .text-li:nth-child(5) h6:before {
+  content: '⑤';
+}
+
+.contents > section .text .text-li:nth-child(6) h6:before {
+  content: '⑥';
+}
+
+.contents > section .text .text-li:nth-child(7) h6:before {
+  content: '⑦';
+}
+
+.contents > section .text .text-li:nth-child(7) h6:before {
+  content: '⑧';
+}
+
+.contents > section .text .text-li:nth-child(7) h6:before {
+  content: '⑨';
 }
 
 .contents > section .refer {
