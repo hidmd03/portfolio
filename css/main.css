@@ -622,6 +622,10 @@ body.welcome .container > section.hello .text_wrap p {
   margin-top: 2em;
 }
 
+body.welcome .container > section.hello .text_wrap p:first-child {
+  margin-top: 0;
+}
+
 body.about .container > section.hello .text_wrap p {
   margin-top: 1.5em;
   line-height: 1.675;
@@ -650,6 +654,12 @@ body.about .container > section.hello .text_wrap p:first-child {
 }
 
 @media (max-width: 767px) {
+  .container > section.hello .text_wrap h2 {
+    margin-bottom: 0.85em;
+  }
+  body.welcome .container > section.hello .text_wrap p {
+    font-size: 1rem;
+  }
   .container > section.hello .text_wrap p {
     font-size: 1.15rem;
   }
