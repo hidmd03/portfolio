@@ -539,6 +539,7 @@ body .container div.mobile_nav ul.secondary a:after {
   .container > section.contact .text_wrap > ul > li {
     flex-direction: column;
     padding-top: 0.5em;
+    margin-top: 5em;
   }
 }
 
