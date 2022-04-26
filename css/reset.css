@@ -6,7 +6,15 @@
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   word-break: keep-all;
   color: #1d1d1d;
+  letter-spacing: 0.02em;
 }
+
+@media (max-width: 480px) {
+  * {
+    letter-spacing: 0.015rem;
+  }
+}
+
 body,
 div,
 p,
