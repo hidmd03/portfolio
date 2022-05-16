@@ -2199,7 +2199,8 @@ footer .description ul li:first-child {
 }
 
 .ex-list a {
-  display: block;
+  font-size: 0.8em;
+  display: inline-block;
   text-decoration: underline;
 }
 
