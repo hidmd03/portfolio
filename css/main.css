@@ -364,8 +364,12 @@ body.nav .container div.mobile_nav > div {
   transform: translate3d(0, 0, 0);
   padding: 2em 0;
 }
+body .container div.mobile_nav > div {
+  opacity: 0;
+  transition: opacity 0.1s ease-out, transform 1.4s 0s cubic-bezier(0, 0.8, 0.2, 1);
+  transform: translate3d(0, -5em, 0);
+}
 body.nonav .container div.mobile_nav {
-  transition: all 0.7s cubic-bezier(0.8, 0, 0.2, 1);
   transform: translate3d(0, -100%, 0);
 }
 body .container div.mobile_nav {
@@ -380,6 +384,7 @@ body .container div.mobile_nav {
   justify-content: space-around;
   box-sizing: border-box;
   pointer-events: none;
+  transition: transform 0.7s 0s cubic-bezier(0, 0.8, 0.2, 1);
   transform: translate3d(0, -100%, 0);
 }
 body .container div.mobile_nav:after {
@@ -400,12 +405,6 @@ body .container div.mobile_nav:after {
 
 body.pages .container div.mobile_nav:after {
   background-color: var(--main-color);
-}
-
-body .container div.mobile_nav > div {
-  opacity: 0;
-  transition: opacity 0.3s 0s ease-out, transform 0.5s 0.2s cubic-bezier(0, 0.8, 0.2, 1);
-  transform: translate3d(0, -5em, 0);
 }
 body .container div.mobile_nav p.eyebrow {
   margin-bottom: 0.5em;
