@@ -2,13 +2,16 @@
 
 /* reset */
 * {
-  font-family: 'BznavSans', 'TossFaceFontMac', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "BznavSans", "TossFaceFontMac", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
   outline: none;
   box-sizing: border-box;
   word-break: keep-all;
   color: #1d1d1d;
   letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  white-space: normal;
+  text-rendering: optimizeLegibility;
 }
 
 @media (max-width: 480px) {
@@ -61,17 +64,13 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   font-weight: 700;
-  -webkit-font-smoothing: antialiased;
-  white-space: normal;
-  text-rendering: optimizeLegibility;
 }
 
 h1,
 h2 {
-  font-family: 'FreightText';
+  font-family: "FreightText";
 }
 
 li {
@@ -95,81 +94,65 @@ p {
 }
 
 a.external:after {
-  content: ' →';
+  content: " →";
   font-size: 1.3rem;
   position: relative;
   top: 2px;
 }
 
-h2 {
-  font-size: 2.5rem;
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 60px;
   line-height: 1;
 }
-h3 {
-  font-size: 2rem;
-  line-height: 1.1666666667;
+
+h2 {
+  font-size: 38px;
+  line-height: 1;
 }
-h4 {
-  font-size: 1.75rem;
+
+h3 {
+  font-size: 32px;
   line-height: 1.2;
 }
-h5 {
-  font-size: 1.5rem;
+
+h4 {
+  font-size: 26px;
+  line-height: 1.2;
 }
+
+h5 {
+  font-size: 21px;
+}
+
 h6 {
-  font-size: 1.15rem;
+  font-size: 18px;
   font-weight: 500;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1600px) {
   body {
     font-size: 15px;
   }
-  h2 {
-    font-size: 3.25rem;
-    line-height: 1;
-  }
-  h3 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-  h4 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-  h5 {
-    font-size: 1.65rem;
-  }
-  h6 {
-    font-size: 1.2rem;
-  }
-}
-@media (min-width: 1080px) {
-  body {
-    font-size: 16px;
+  h1 {
+    font-size: calc(44px + (60 - 44) * ((100vw - 320px) / (1600 - 320)));
   }
   h2 {
-    font-size: 4rem;
-    line-height: 1;
+    font-size: calc(28px + (38 - 28) * ((100vw - 320px) / (1600 - 320)));
   }
   h3 {
-    font-size: 3rem;
-    line-height: 1.2;
+    font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1600 - 320)));
   }
   h4 {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: calc(22px + (26 - 22) * ((100vw - 320px) / (1600 - 320)));
   }
   h5 {
-    font-size: 1.75rem;
+    font-size: calc(18px + (21 - 18) * ((100vw - 320px) / (1600 - 320)));
   }
   h6 {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-}
-@media (max-width: 767px) {
-  body {
-    font-size: 14px;
+    font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1600 - 320)));
   }
 }
