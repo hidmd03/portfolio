@@ -620,7 +620,7 @@ body .container div.mobile_nav ul.secondary a:after {
 }
 
 body.welcome .container > section.hello .text_wrap p {
-  line-height: 1.5;
+  line-height: 1.48;
   font-weight: 500;
   letter-spacing: 0.05rem;
   margin-top: 2em;
@@ -1487,7 +1487,7 @@ body .container .contents {
 }
 
 .contents > section .text .text-li {
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 
 .contents > section .text .text-li h6 {
@@ -1594,7 +1594,7 @@ body .container .contents {
 }
 
 .contents > section .text + ul.text {
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 .contents > section .quote {
@@ -1616,8 +1616,11 @@ body .container .contents {
 }
 
 @media (max-width: 767px) {
+  .contents > section .text + ul.text {
+    margin-top: 5rem;
+  }
   .contents > section .text .text-li {
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
   .contents > section .text .text-li h6 {
     font-size: 1.1rem;
@@ -1639,8 +1642,11 @@ body .container .contents {
 }
 
 @media (max-width: 480px) {
+  .contents > section .text + ul.text {
+    margin-top: 4rem;
+  }
   .contents > section .text .text-li {
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
   .contents > section .text .text-li h6 {
     font-size: 1.05rem;
@@ -1682,7 +1688,7 @@ body .container .contents {
 
 .contents > section .img-wrap .caption {
   display: block;
-  margin: 1.25rem auto 8rem;
+  margin: 1.25rem auto 8rem !important;
   font-size: 0.95rem;
   color: rgb(var(--text-color));
   opacity: 0.7;
@@ -1777,7 +1783,7 @@ body .container .contents {
   }
   .contents > section .img-wrap .caption {
     font-size: 0.8rem;
-    margin: 1.25rem auto 5rem;
+    margin: 1.25rem auto 5rem !important;
   }
 }
 @media (max-width: 480px) {
@@ -1785,7 +1791,7 @@ body .container .contents {
     margin-top: 1.5rem;
   }
   .contents > section .img-wrap .caption {
-    margin: 1rem auto 3rem;
+    margin: 1rem auto 3rem !important;
   }
 }
 
