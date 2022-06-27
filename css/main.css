@@ -2261,6 +2261,7 @@ footer .copyright {
 
 footer .mylogo {
   font-family: "FreightText";
+  color: inherit;
 }
 
 @media (max-width: 767px) {
