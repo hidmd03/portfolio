@@ -728,6 +728,12 @@ body.about .container > section.hello .text_wrap p:first-child {
   margin: 4em 0 1em;
 }
 
+@media (max-width: 1280px) {
+  .container > section.work {
+    border-radius: 0;
+  }
+}
+
 @media (max-width: 767px) {
   .container > section.work .block {
     margin: 3em 20px 0;
