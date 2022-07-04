@@ -66,7 +66,6 @@ function progressBar() {
   var height = document.documentElement.scrollHeight - realHeight;
 
   var scrolled = -100 + (winScroll / height) * 100;
-  console.log(scrolled);
 
   if (scrolled >= 0) {
     document.getElementById("pgBar").style.transform = "translateX(0%)";
