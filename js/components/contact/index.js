@@ -4,18 +4,18 @@ const animation = () => {
   var sections = document.querySelectorAll("section");
   var inTransition = false;
   const hideAllSections = () => {
-    sections.forEach(section => {
+    sections.forEach((section) => {
       section.classList.add("hidden");
     });
   };
 
-  const scrollHandler = e => {
+  const scrollHandler = (e) => {
     const hiddenSections = document.querySelectorAll("section.hidden");
     if (inTransition) return;
     for (var i = 0; i < hiddenSections.length; i++) {
       if (isElementInViewport(hiddenSections[i])) {
         setTimeout(
-          section => {
+          (section) => {
             inTransition = true;
             section.classList.remove("hidden");
           },
@@ -27,17 +27,17 @@ const animation = () => {
     }
   };
 
-  const loadHandler = e => {
+  const loadHandler = (e) => {
     if (!loadEventFired) {
       setTimeout(() => {
         document.querySelector(".hello").classList.remove("hidden");
       }, 500);
-      setTimeout(() => {
-        document.querySelector(".contact.first").classList.remove("hidden");
-      }, 1000);
-      setTimeout(() => {
-        document.querySelector(".contact.second").classList.remove("hidden");
-      }, 1500);
+      // setTimeout(() => {
+      //   document.querySelector(".contact.first").classList.remove("hidden");
+      // }, 1000);
+      // setTimeout(() => {
+      //   document.querySelector(".contact.second").classList.remove("hidden");
+      // }, 1500);
       loadEventFired = true;
     }
   };
@@ -48,7 +48,7 @@ const animation = () => {
       window.addEventListener("load", loadHandler);
       hideAllSections();
       window.triggerLoad = loadHandler;
-    }
+    },
   };
 };
 animation().Init();
