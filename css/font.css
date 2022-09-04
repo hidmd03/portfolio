@@ -5,7 +5,7 @@
   src: url("../fonts/FreightText/3866ef6c-9678-4744-b9cc-320b34a5a66e.woff2") format("woff2"),
     url("../fonts/FreightText/ccafaace-64a4-4386-ac8d-b91b19487176.woff") format("woff");
   font-weight: bold;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: https://www.linotype.com */
@@ -18,7 +18,7 @@
     url("../fonts/BznavSans/BznavSans-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -27,7 +27,7 @@
     url("../fonts/BznavSans/BznavSans-ExtraLight.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -36,7 +36,7 @@
     url("../fonts/BznavSans/BznavSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -45,7 +45,7 @@
     url("../fonts/BznavSans/BznavSans-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -54,7 +54,7 @@
     url("../fonts/BznavSans/BznavSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -63,7 +63,7 @@
     url("../fonts/BznavSans/BznavSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 /* TossFace */
@@ -72,5 +72,5 @@
   font-family: "TossFace";
   src: url("../fonts/TossFace/TossFaceFontMac.ttf") format("truetype");
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
