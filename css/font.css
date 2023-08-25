@@ -10,57 +10,57 @@
 
 /* This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: https://www.linotype.com */
 
-/* Bznav Sans */
+/* BZNAV Sans */
 
 @font-face {
-  font-family: "BznavSans";
-  src: url("../fonts/BznavSans/BznavSans-Bold.woff2") format("woff2"), url("../fonts/BznavSans/BznavSans-Bold.woff") format("woff"),
-    url("../fonts/BznavSans/BznavSans-Bold.ttf") format("truetype");
+  font-family: "BZNAV Sans";
+  src: url("../fonts/BZNAVSans/BZNAVSans-Bold.woff2") format("woff2"), url("../fonts/BZNAVSans/BZNAVSans-Bold.woff") format("woff"),
+    url("../fonts/BZNAVSans/BZNAVSans-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "BznavSans";
-  src: url("../fonts/BznavSans/BznavSans-ExtraLight.woff2") format("woff2"), url("../fonts/BznavSans/BznavSans-ExtraLight.woff") format("woff"),
-    url("../fonts/BznavSans/BznavSans-ExtraLight.ttf") format("truetype");
+  font-family: "BZNAV Sans";
+  src: url("../fonts/BZNAVSans/BZNAVSans-ExtraLight.woff2") format("woff2"), url("../fonts/BZNAVSans/BZNAVSans-ExtraLight.woff") format("woff"),
+    url("../fonts/BZNAVSans/BZNAVSans-ExtraLight.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "BznavSans";
-  src: url("../fonts/BznavSans/BznavSans-Light.woff2") format("woff2"), url("../fonts/BznavSans/BznavSans-Light.woff") format("woff"),
-    url("../fonts/BznavSans/BznavSans-Light.ttf") format("truetype");
+  font-family: "BZNAV Sans";
+  src: url("../fonts/BZNAVSans/BZNAVSans-Light.woff2") format("woff2"), url("../fonts/BZNAVSans/BZNAVSans-Light.woff") format("woff"),
+    url("../fonts/BZNAVSans/BZNAVSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "BznavSans";
-  src: url("../fonts/BznavSans/BznavSans-Black.woff2") format("woff2"), url("../fonts/BznavSans/BznavSans-Black.woff") format("woff"),
-    url("../fonts/BznavSans/BznavSans-Black.ttf") format("truetype");
+  font-family: "BZNAV Sans";
+  src: url("../fonts/BZNAVSans/BZNAVSans-Black.woff2") format("woff2"), url("../fonts/BZNAVSans/BZNAVSans-Black.woff") format("woff"),
+    url("../fonts/BZNAVSans/BZNAVSans-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "BznavSans";
-  src: url("../fonts/BznavSans/BznavSans-Regular.woff2") format("woff2"), url("../fonts/BznavSans/BznavSans-Regular.woff") format("woff"),
-    url("../fonts/BznavSans/BznavSans-Regular.ttf") format("truetype");
+  font-family: "BZNAV Sans";
+  src: url("../fonts/BZNAVSans/BZNAVSans-Regular.woff2") format("woff2"), url("../fonts/BZNAVSans/BZNAVSans-Regular.woff") format("woff"),
+    url("../fonts/BZNAVSans/BZNAVSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "BznavSans";
-  src: url("../fonts/BznavSans/BznavSans-Medium.woff2") format("woff2"), url("../fonts/BznavSans/BznavSans-Medium.woff") format("woff"),
-    url("../fonts/BznavSans/BznavSans-Medium.ttf") format("truetype");
+  font-family: "BZNAV Sans";
+  src: url("../fonts/BZNAVSans/BZNAVSans-Medium.woff2") format("woff2"), url("../fonts/BZNAVSans/BZNAVSans-Medium.woff") format("woff"),
+    url("../fonts/BZNAVSans/BZNAVSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
