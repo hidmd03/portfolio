@@ -125,7 +125,7 @@ header.top {
 
 header.sticky {
   position: fixed;
-  top: -60px;
+  top: -64px;
   left: 0;
   animation-name: landDown;
   animation-duration: 0.5s;
@@ -459,13 +459,13 @@ body .container div.mobile_nav ul.primary a {
   font-size: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
+  text-decoration: underline;
   color: #1c1c1f;
   letter-spacing: 0.05rem;
 }
 
 body.pages .container div.mobile_nav ul.primary a {
   color: white;
-  text-decoration: underline;
 }
 
 body .container div.mobile_nav ul.primary a.active {
@@ -2198,6 +2198,17 @@ body .material-icons {
   background: transparent;
   bottom: -4px;
   opacity: 0;
+}
+
+.progress-container:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  z-index: 1;
 }
 
 .progress-container.up {
