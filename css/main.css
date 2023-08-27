@@ -129,8 +129,19 @@ header.sticky {
   left: 0;
   animation-name: landDown;
   animation-duration: 0.5s;
-  background-color: rgb(var(--main-color));
   transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+header.sticky:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% * 2);
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(var(--main-color), 0.88);
 }
 
 header.sticky.focusout {
@@ -165,13 +176,23 @@ header.sticky nav ul li a {
 header.sticky nav ul li a:after {
   background-color: white;
 }
+
 header.offscreen {
   position: fixed;
   transform: translate3d(0, -300%, 0);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   overflow-y: hidden;
-  background-color: rgba(255, 255, 255, 0.84);
+}
+
+header.offscreen:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% * 2);
+  transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.88);
 }
 
 @media (min-width: 768px) {
@@ -193,14 +214,13 @@ header.offscreen {
     position: fixed;
   }
   header.offscreen {
-    -webkit-backdrop-filter: blur(0px);
-    backdrop-filter: blur(0px);
-    background-color: rgba(255, 255, 255, 1);
     transform: translate3d(0, 0, 0);
   }
 }
 
 header nav {
+  position: relative;
+  z-index: 3;
   max-width: 1080px;
   display: flex;
   flex-direction: row;
@@ -242,6 +262,7 @@ header nav a.logo h1 {
 header nav a.logo h1 {
   position: relative;
   font-weight: 700;
+  top: -1px;
   font-family: "FreightText";
   letter-spacing: -0.075rem;
   font-size: 26px;
