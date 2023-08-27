@@ -176,7 +176,7 @@ header.offscreen {
 
 @media (min-width: 768px) {
   header.sticky {
-    top: -60px;
+    top: -64px;
   }
   header.offscreen.active {
     transform: translate3d(0, 0, 0);
@@ -859,10 +859,17 @@ body.about .container > section.hello .text_wrap p:first-child {
   transform: translateX(calc(-100% - 0.1rem));
   animation: 0.25s cubic-bezier(0.28, 0.44, 0.49, 1) 0s trace-out forwards;
 }
+
 .container > section.work .block li:hover .title-content-headline:after {
   opacity: 1;
   -webkit-animation: 0.25s cubic-bezier(0.28, 0.44, 0.49, 1) 0s trace-in forwards;
   animation: 0.25s cubic-bezier(0.28, 0.44, 0.49, 1) 0s trace-in forwards;
+}
+
+.title-content-headline span {
+  display: inline-block;
+  font-weight: inherit;
+  color: inherit;
 }
 
 .title-content-text {
@@ -2151,20 +2158,22 @@ body .container .contents {
 }
 
 #prev:before {
-  content: "<";
-  font-size: 28px;
+  content: "";
+  font-size: 24px;
   position: absolute;
-  right: 15.5px;
+  left: calc(50% - 1px);
+  transform: translate3d(-50%, 0, 0);
 }
 #next {
   right: -10px;
 }
 
 #next:before {
-  content: ">";
-  font-size: 28px;
+  content: "";
+  font-size: 24px;
   position: absolute;
-  left: 15.5px;
+  left: calc(50% + 1px);
+  transform: translate3d(-50%, 0, 0);
 }
 
 #prev.no,
